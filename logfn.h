@@ -11,28 +11,28 @@ void initLogFn() { is_log_color_support = isatty(STDERR_FILENO); }
 #define logDebug(fmt, ...)                                                     \
     do {                                                                       \
         const char* const restrict prefix =                                    \
-            is_log_color_support ? "\x1b[1;35m[Debug]\x1b[0m" : "[Debug]";     \
+            is_log_color_support ? "\x1b[1;35m[debug]\x1b[0m" : "[debug]";     \
         fprintf(logf, "%s " fmt "\n", prefix, ##__VA_ARGS__);                  \
     } while (0)
 
 #define logInfo(fmt, ...)                                                      \
     do {                                                                       \
         const char* const restrict prefix =                                    \
-            is_log_color_support ? "\x1b[1;32m[Info]\x1b[0m" : "[Info]";       \
+            is_log_color_support ? "\x1b[1;32m[info]\x1b[0m" : "[info]";       \
         fprintf(logf, "%s " fmt "\n", prefix, ##__VA_ARGS__);                  \
     } while (0)
 
 #define logWarning(fmt, ...)                                                   \
     do {                                                                       \
         const char* const restrict prefix =                                    \
-            is_log_color_support ? "\x1b[1;33m[Warning]\x1b[0m" : "[Warning]"; \
+            is_log_color_support ? "\x1b[1;33m[warning]\x1b[0m" : "[warning]"; \
         fprintf(logf, "%s " fmt "\n", prefix, ##__VA_ARGS__);                  \
     } while (0)
 
 #define logError(fmt, ...)                                                     \
     do {                                                                       \
         const char* const restrict prefix =                                    \
-            is_log_color_support ? "\x1b[1;31m[Error]\x1b[0m" : "[Error]";     \
+            is_log_color_support ? "\x1b[1;31m[error]\x1b[0m" : "[error]";     \
         fprintf(logf, "%s " fmt "\n", prefix, ##__VA_ARGS__);                  \
     } while (0)
 //
