@@ -35,3 +35,4 @@ void initLogFn() { is_log_color_support = isatty(STDERR_FILENO); }
             is_log_color_support ? "\x1b[1;31m[Error]\x1b[0m" : "[Error]";     \
         fprintf(logf, "%s " fmt "\n", prefix, ##__VA_ARGS__);                  \
     } while (0)
+//
